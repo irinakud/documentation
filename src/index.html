@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="grid-container">
+      <nav id="navbar">
+        <header>Basic HTML and CSS</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Web_Page_Structure">Web Page Structure</a>
+        <a class="nav-link" href="#CSS_Rules">CSS Rules</a>
+        <a class="nav-link" href="#Accessibility">Accessibility</a>
+        <a class="nav-link" href="#CSS_Flexbox">CSS Flexbox</a>
+        <a class="nav-link" href="#CSS_Grid">CSS Grid</a>
+      </nav>
+      <main id="main-doc">
+        <section id="Introduction" class="main-section">
+          <header>Introduction</header>
+          <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (<a href="#CSS_Rules">CSS</a>) or functionality/behavior.</p>
+          <p>"HyperText" refers to links that connect web pages to one another, either within a single website or between websites.</p>
+          <p>HTML uses "markup" to create structure for the content to display in a Web browser. HTML markup includes special "elements" or "tags" such as <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;nav&gt;</code> and many others.</p>
+        </section>
+        <section id="Web_Page_Structure" class="main-section">
+          <header>Web Page Structure</header>
+          <p>A basic web page structure is the following:</p>
+          <p>
+            <div class="code_div">
+              <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;
+                <div class="tab_code">
+                    &lt;head&gt;
+                        <div class="tab_code">&lt;!--metadata elements--&gt;</div>
+                    &lt;/head&gt;
+                </div>
+                <div class="tab_code">
+                    &lt;body&gt;
+                        <div class="tab_code">&lt;!--page content--&gt;</div>
+                    &lt;/body&gt;
+                </div>
+                &lt;/html&gt;
+              </code>
+            </div>
+          </p>
+          <p>Metadata elements are the following: <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;style&gt;</code>.</p>
+          <p>Page content can be marked up using a variety of HTML tags, including <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;div&gt;</code>.</p>
+        </section>
+        <section id="CSS_Rules" class="main-section">
+          <header>CSS Rules</header>
+          <p>CSS describes how HTML elements should be displayed. To select the elements for styling, we can use the following selectors:</p>
+          <ul>
+            <li><code>element</code> selects all &lt;elements&gt;. For example, selector <code>p</code> selects all elements <code>&lt;p&gt;</code>.
+            </li>
+            <li><code>.myClass</code> selects all elements with <code>class="myClass"</code>.
+            </li>
+             <li><code>#myId</code> selects all elements with <code>id="myId"</code>.
+            </li>
+            <li><code>element.myClass</code> selects all &lt;elements&gt; with <code>class="myClass"</code>. For example, <code>p.myClass</code> selects all elements <code>&lt;p class="myClass"&gt;</code>.
+            </li>
+             <li><code>*</code> selects all elements.
+            </li>
+          </ul>
+          <p>With CSS we can define colour of elements, their style, size, position, set a backround, a layout of elements, create a picture or an animation, specify how elements behave under different curcumstances (e.g. when a cursor hovers over them, when they are active/not active or when the web page changes it's size). </p>
+        </section>
+        <section id="Accessibility" class="main-section">
+          <header>Accessibility</header>
+          <p>Accessibility in web design is when the UI and the content is easily understood by all people, including those with auditory and visual disabilities.</p>
+          <p>Therefore, having an accessible design means:
+              <ol>
+                <li>Having a well-organized code with appropriate markup.</li>
+                <li>Having text alternatives for non-text and visual content.</li>
+                <li>Creating an easily-navigated page that's keyboard-friendly.</li>
+              </ol>
+          </p>
+        </section>
+        <section id="CSS_Flexbox" class="main-section">
+          <header>CSS Flexbox</header>
+          <p>CSS3 introduced Flexbox to create dynamic page layouts where elements are arranged in a predictable way for different screen sizes and browsers.</p>
+          <p>Flexbox is a one-dimensional layout as it has either a row or a column at a time.</p>
+          <p>
+            When we assign style <code>display: flex;</code> to an element, we declare this element to be a flexbox (with one row by default). The flexbox direction can be specified by  the <code>flex-direction</code> property, which has 4 values: <code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code>.
+          </p>
+        </section>
+        <section id="CSS_Grid" class="main-section">
+          <header>CSS Grid</header>
+          <p>CSS Grid Layout is the two-dimensional model with columns and rows together.</p>
+          <p>To declare that an element is a grid, we set <code>display: grid;</code> in the element style.</p>
+          <p>To add some columns to the grid, use the <code>grid-template-columns</code> property:</p>
+          <div class="code_div">
+             <code>.myGridElement {
+             <div class="tab_code">
+                  display: grid;<br>
+                  grid-template-columns: 50px 50px;<br>
+               </div>
+               }
+             </code>
+          </div>
+            <p>The number of parameters given to the <code>grid-template-columns</code> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.</p>
+          <p>Other properties like <code>grid-template-areas</code>, <code>grid-row-gap</code>, <code>grid-template-rows</code> can be used for laying out the grid as well.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

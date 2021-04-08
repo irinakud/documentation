@@ -1,0 +1,59 @@
+body {
+    font-family: 'Inconsolata', sans-serif;
+    margin: 0px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "navbar main-doc"
+}
+#navbar {
+  position: fixed;
+  height: 100%;
+  grid-area: navbar;
+  padding: 10px;
+  margin: 0px;
+  border-right: solid gray;
+}
+#main-doc {
+  grid-area: main-doc;
+  padding-top: 10px;
+  margin-left: 300px;;
+}
+.nav-link {
+  display: block;
+  margin: 20px;
+  font-size: 1.2em;
+}
+header {
+  font-size: 1.8em;
+}
+code {
+  background-color: #fff9e6;
+}
+.code_div {
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff9e6;
+}
+.tab_code {
+  padding-left: 20px;
+}
+@media (max-width: 500px){
+    .grid-container{
+      grid-template-areas:
+        "navbar"
+        "main-doc";
+    }
+    #navbar {
+      position: static;
+      border-right: 0;
+      border-bottom: solid gray;
+    }
+    #main-doc {
+      margin: 20px;
+      padding-top: 20px;
+    }
+  }
+  

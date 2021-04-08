@@ -1,0 +1,14 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/irinakud/documentation.git",
+  "author": "irinakud <irbaska@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  }
+}
